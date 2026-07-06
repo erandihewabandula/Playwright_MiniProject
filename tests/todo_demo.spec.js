@@ -4,28 +4,12 @@ test('todo_app @sanity', async ({ page }) => {
   await page.goto('https://todomvc.com/examples/react/dist/');
 
   await page.getByTestId('text-input').click();
-  //await page.getByTestId('text-input').press('CapsLock');
-  //await page.getByTestId('text-input').fill('B');
-  //await page.getByTestId('text-input').press('CapsLock');
-  //await page.getByTestId('text-input').fill('Buy ');
-  //await page.getByTestId('text-input').press('CapsLock');
-  //wait page.getByTestId('text-input').fill('Buy G');
-  //await page.getByTestId('text-input').press('CapsLock');
   await page.getByTestId('text-input').fill('Buy Grocery');
   await page.getByTestId('text-input').press('Enter');
-  //await page.getByTestId('text-input').press('CapsLock');
-  //await page.getByTestId('text-input').fill('G');
-  //await page.getByTestId('text-input').press('CapsLock');
   await page.getByTestId('text-input').fill('Go for walk');
   await page.getByTestId('text-input').press('Enter');
-  //await page.getByTestId('text-input').press('CapsLock');
-  //await page.getByTestId('text-input').fill('R');
-  //await page.getByTestId('text-input').press('CapsLock');
   await page.getByTestId('text-input').fill('Rest');
   await page.getByTestId('text-input').press('Enter');
-  //await page.getByTestId('text-input').press('CapsLock');
-  //await page.getByTestId('text-input').fill('P');
-  //await page.getByTestId('text-input').press('CapsLock');
   await page.getByTestId('text-input').fill('Play');
   await page.getByTestId('text-input').press('Enter');
 
