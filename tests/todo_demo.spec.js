@@ -16,6 +16,10 @@ test('todo_app @sanity', async ({ page }) => {
   //Verify all tasks in the todo List
   await page.getByRole('link', { name: 'All' }).click();
 
+  //Display all Tasks in the console
+  const AllTasks = await page.getByTestId('todo-list').getByRole('listitem').allTextContents();
+  console.log('All Tasks:', AllTasks);
+
   //Mark "Buy Grocery" & "Rest" tasks as completed
   await page.getByRole('listitem').filter({ hasText: 'Buy Grocery' }).getByTestId('todo-item-toggle').check();
   await page.getByRole('listitem').filter({ hasText: 'Rest' }).getByTestId('todo-item-toggle').check();
